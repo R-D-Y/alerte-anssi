@@ -36,22 +36,33 @@ alerte = soup.select_one("body > div > div > section > div:nth-child(2) > div > 
 #print("Detail:", detail)
 #print("Lien vers le reste de l'article : <a href='" + detail + "'>Cliquez ici</a>")
 
+content = f"""
+Titre : {titre}
+Date : {date}
+Description : {description}
+PDF : {pdf}
+Alerte : {alerte}
+Detail : {detail}
+Lien vers le reste de l'article : <a href='{detail}'>Cliquez ici</a>
+
+"""
+
 # Ecriture dans le fichier resultat.md
 with open("resultat.md", "w", encoding="utf-8") as f:
-    f.write(f"Titre: {titre}\n")
-    f.write(f"Date: {date}\n")
-    f.write(f"Description: {description}\n")
-    f.write(f"PDF: {pdf}\n")
-    f.write(f"Alerte: {alerte}\n")
-    f.write(f"Detail: {detail}\n")
-    f.write(f"Lien vers le reste de l'article : <a href='{detail}'>Cliquez ici</a>\n")
+    f.write(content)
+
+
+#    f.write(f"Titre: {titre}\n")
+#    f.write(f"Date: {date}\n")
+#    f.write(f"Description: {description}\n")
+#    f.write(f"PDF: {pdf}\n")
+#    f.write(f"Alerte: {alerte}\n")
+#    f.write(f"Detail: {detail}\n")
+#    f.write(f"Lien vers le reste de l'article : <a href='{detail}'>Cliquez ici</a>\n")
 
 # Ajout du fichier resultat.md dans le repo
-repo = git.Repo("C:/Users/remid/OneDrive/Bureau/M1/ProjetAnnuel23/infrastructure/")
-repo.git.add(".")
-repo.index.commit("Mise à jour du fichier resultat.md")
-origin = repo.remote(name='origin')
-origin.push()
-
-
-
+#repo = git.Repo("C:/Users/remid/OneDrive/Bureau/M1/ProjetAnnuel23/infrastructure/")
+#repo.git.add(".")
+#repo.index.commit("Mise à jour du fichier resultat.md")
+#origin = repo.remote(name='remi')
+#origin.push()
