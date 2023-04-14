@@ -1,2 +1,2 @@
 # alerte-anssi
-Automation script to provide the last anssi alert
+Automation script to provide the last anssi alert (loading...)
