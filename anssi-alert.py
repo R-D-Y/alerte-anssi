@@ -6,6 +6,7 @@ url = "https://www.cert.ssi.gouv.fr/alerte/"
 response = requests.get(url)
 soup = BeautifulSoup(response.content, "html.parser")
 
+
 #Description de l'article
 description = soup.select_one("body > div > div > section > div:nth-child(2) > div > div.cards > section > article:nth-child(1) > section.item-excerpt > p").text.strip()
 
