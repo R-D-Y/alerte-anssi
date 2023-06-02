@@ -25,7 +25,7 @@ pdf = soup.select_one("body > div > div > section > div:nth-child(2) > div > div
 #etat de l'alerte
 alerte = soup.select_one("body > div > div > section > div:nth-child(2) > div > div.cards > section > article:nth-child(1) > section.item-header > div.item-meta > span.item-status").text.strip()
 
-#resultat
+
 print("Titre:", titre)
 print("Date:", date)
 print("Description:", description)
